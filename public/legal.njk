@@ -1,0 +1,95 @@
+---
+layout: layout.njk
+title: Rechtliches - GreenHOMEnergy
+---
+
+<style>
+    .legal-layout {
+        display: flex;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .legal-nav {
+        flex: 0 0 250px;
+    }
+    .legal-nav ul {
+        list-style: none;
+        padding: 0;
+        position: sticky;
+        top: 100px;
+    }
+    .legal-nav a {
+        display: block;
+        padding: 1rem;
+        border-radius: 8px;
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: 500;
+        transition: background-color 0.3s;
+    }
+    .legal-nav a:hover, .legal-nav a.active {
+        background-color: var(--accent-color);
+        color: white;
+    }
+    .legal-content {
+        flex: 1;
+    }
+    .legal-section {
+        display: none;
+    }
+    .legal-section.active {
+        display: block;
+    }
+</style>
+
+<main id="main-content" class="container section">
+    <h1 class="section-title" data-i18n="legal.page_title">{{ "legal.page_title" | i18n }}</h1>
+    <div class="legal-layout">
+        <aside class="legal-nav">
+            <ul>
+                <li><a href="#impressum" class="legal-link" data-i18n="legal.nav.impressum">{{ "legal.nav.impressum" | i18n }}</a></li>
+                <li><a href="#datenschutz" class="legal-link" data-i18n="legal.nav.datenschutz">{{ "legal.nav.datenschutz" | i18n }}</a></li>
+                <li><a href="#agb" class="legal-link" data-i18n="legal.nav.agb">{{ "legal.nav.agb" | i18n }}</a></li>
+                <li><a href="#widerruf" class="legal-link" data-i18n="legal.nav.widerruf">{{ "legal.nav.widerruf" | i18n }}</a></li>
+            </ul>
+        </aside>
+        <div class="legal-content">
+            <section id="impressum" class="legal-section">
+                <h2 data-i18n="legal.impressum.title">{{ "legal.impressum.title" | i18n }}</h2>
+                <p data-i18n="legal.impressum.intro">{{ "legal.impressum.intro" | i18n }}</p>
+                <p><strong data-i18n="legal.impressum.tmg_label">{{ "legal.impressum.tmg_label" | i18n }}</strong></p>
+                <p data-i18n="legal.impressum.company_info">{{ "legal.impressum.company_info" | i18n | safe }}</p>
+                <p>
+                    <strong data-i18n="legal.impressum.represented_by">{{ "legal.impressum.represented_by" | i18n }}</strong><br>
+                    <span data-i18n="legal.impressum.representative">{{ "legal.impressum.representative" | i18n }}</span>
+                </p>
+                <p>
+                    <strong data-i18n="legal.impressum.contact_label">{{ "legal.impressum.contact_label" | i18n }}</strong><br>
+                    <span data-i18n="legal.impressum.contact_info">{{ "legal.impressum.contact_info" | i18n | safe }}</span>
+                </p>
+                <p>
+                    <strong data-i18n="legal.impressum.register_label">{{ "legal.impressum.register_label" | i18n }}</strong><br>
+                    <span data-i18n="legal.impressum.register_info">{{ "legal.impressum.register_info" | i18n | safe }}</span>
+                </p>
+                <p>
+                    <strong data-i18n="legal.impressum.vat_label">{{ "legal.impressum.vat_label" | i18n }}</strong><br>
+                    <span data-i18n="legal.impressum.vat_info">{{ "legal.impressum.vat_info" | i18n | safe }}</span>
+                </p>
+            </section>
+            <section id="datenschutz" class="legal-section">
+                <h2 data-i18n="legal.datenschutz.title">{{ "legal.datenschutz.title" | i18n }}</h2>
+                <p data-i18n="legal.datenschutz.content">{{ "legal.datenschutz.content" | i18n }}</p>
+            </section>
+            <section id="agb" class="legal-section">
+                <h2 data-i18n="legal.agb.title">{{ "legal.agb.title" | i18n }}</h2>
+                <p data-i18n="legal.agb.content">{{ "legal.agb.content" | i18n }}</p>
+            </section>
+            <section id="widerruf" class="legal-section">
+                <h2 data-i18n="legal.widerruf.title">{{ "legal.widerruf.title" | i18n }}</h2>
+                <p data-i18n="legal.widerruf.content">{{ "legal.widerruf.content" | i18n }}</p>
+            </section>
+        </div>
+    </div>
+</main>
+
+<script src="/js/legal.js"></script>

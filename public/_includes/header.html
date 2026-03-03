@@ -1,0 +1,49 @@
+<!-- Skip Links for Accessibility -->
+  <div class="skip-links">
+    <a href="#main-content" class="skip-link" data-i18n="accessibility.skip_main">{{ "accessibility.skip_main" | i18n }}</a>
+    <a href="#navigation" class="skip-link" data-i18n="accessibility.skip_nav">{{ "accessibility.skip_nav" | i18n }}</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <nav class="nav container" id="navigation" aria-label="" data-i18n="accessibility.main_nav_aria" data-i18n-attr="aria-label">
+      <!-- Logo -->
+      <a href="/" class="logo-link" aria-label="GreenHOMEnergy Startseite">
+        <div id="lottie-logo" class="logo-animated" aria-hidden="true"></div>
+        <img src="/assets/logo/GHE_LOGO_KURZ.svg" alt="GreenHOMEnergy Logo" class="logo-fallback">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <ul class="nav-menu" role="menubar">
+        <li role="none"><a href="/" class="nav-link" role="menuitem" data-i18n="navigation.home">{{ "navigation.home" | i18n }}</a></li>
+        <li role="none"><a href="/services/" class="nav-link" role="menuitem" data-i18n="navigation.services">{{ "navigation.services" | i18n }}</a></li>
+        <li role="none"><a href="/projects/" class="nav-link" role="menuitem" data-i18n="navigation.projects">{{ "navigation.projects" | i18n }}</a></li>
+<!--
+        <li role="none"><a href="/news/" class="nav-link" role="menuitem" data-i18n="navigation.news">{{ "navigation.news" | i18n }}</a></li>
+-->        
+        <li role="none"><a href="/contact/" class="nav-link" role="menuitem" data-i18n="navigation.contact">{{ "navigation.contact" | i18n }}</a></li>
+      </ul>
+
+      <!-- Desktop Controls -->
+      <div class="nav-controls">
+        <div class="theme-switcher"></div>
+        <div class="language-switcher"></div>
+        <button class="mobile-menu-toggle" aria-label="" aria-expanded="false" aria-controls="mobile-menu" data-i18n="accessibility.menu_toggle_aria" data-i18n-attr="aria-label">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu (hidden by default) -->
+      <div class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-nav-list" role="menubar">
+          <li role="none"><a href="/" class="mobile-nav-link" role="menuitem" data-i18n="navigation.home">{{ "navigation.home" | i18n }}</a></li>
+          <li role="none"><a href="/services/" class="mobile-nav-link" role="menuitem" data-i18n="navigation.services">{{ "navigation.services" | i18n }}</a></li>
+          <li role="none"><a href="/projects/" class="mobile-nav-link" role="menuitem" data-i18n="navigation.projects">{{ "navigation.projects" | i18n }}</a></li>
+<!--
+          <li role="none"><a href="/news/" class="mobile-nav-link" role="menuitem" data-i18n="navigation.news">{{ "navigation.news" | i18n }}</a></li>
+-->
+          <li role="none"><a href="/contact/" class="mobile-nav-link" role="menuitem" data-i18n="navigation.contact">{{ "navigation.contact" | i18n }}</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>

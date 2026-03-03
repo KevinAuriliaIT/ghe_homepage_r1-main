@@ -1,0 +1,229 @@
+---
+layout: layout.njk
+title: GreenHOMEnergy - Professionelle Photovoltaikanlagen für Unternehmen
+---
+
+<!-- Main Content -->
+<main id="main-content" role="main">
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-background" aria-hidden="true"></div>
+        <!-- Video placeholder - replace with actual drone footage -->
+        <video
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            aria-hidden="true"
+        >
+            <source src="assets/videos/drone-footage.mp4" type="video/mp4" />
+            <!-- Fallback for browsers that don't support video -->
+        </video>
+
+        <div class="hero-content glass-card">
+            <h1 id="hero-title" class="hero-title" data-i18n="hero.title">
+                {{ "hero.title" | i18n }}
+            </h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">
+                {{ "hero.subtitle" | i18n }}
+            </p>
+            <div class="hero-actions">
+                <a
+                    href="/contact/"
+                    class="btn"
+                    aria-describedby="cta-description"
+                    data-i18n="hero.cta_primary"
+                >
+                    {{ "hero.cta_primary" | i18n }}
+                </a>
+            </div>
+            <p
+                id="cta-description"
+                class="sr-only"
+                data-i18n="hero.cta_aria_description"
+            >
+                {{ "hero.cta_aria_description" | i18n }}
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" aria-labelledby="about-title">
+        <div class="container">
+            <h2 id="about-title" class="section-title" data-i18n="about.title">
+                {{ "about.title" | i18n }}
+            </h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3 class="card-title" data-i18n="about.mission_title">
+                        {{ "about.mission_title" | i18n }}
+                    </h3>
+                    <p class="card-text" data-i18n="about.mission_text">
+                        {{ "about.mission_text" | i18n }}
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title" data-i18n="about.why_title">
+                        {{ "about.why_title" | i18n }}
+                    </h3>
+                    <p class="card-text" data-i18n="about.why_text">
+                        {{ "about.why_text" | i18n }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Map Section -->
+    <section class="section projects-map-section" aria-labelledby="map-title">
+        <div class="container">
+            <h2
+                id="map-title"
+                class="section-title"
+                data-i18n="services.title"
+            >
+                {{ "services.title" | i18n }}
+            </h2>
+            <div class="projects-map-container">
+                <div id="projects-map"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="section" aria-labelledby="stats-title">
+        <div class="container">
+            <h2 id="stats-title" class="section-title" data-i18n="stats.title">
+                {{ "stats.title" | i18n }}
+            </h2>
+            <div class="grid grid-4">
+                <div class="card text-center">
+                    <h3 class="card-title" data-i18n="stats.projects_head">
+                        {{ "stats.projects_head" | i18n }}
+                    </h3>
+                    <p class="card-text" data-i18n="stats.projects">
+                        {{ "stats.projects" | i18n }}
+                    </p>
+                </div>
+                <div class="card text-center">
+                    <h3 class="card-title" data-i18n="stats.power_head">
+                        {{ "stats.power_head" | i18n }}
+                    </h3>
+                    <p class="card-text" data-i18n="stats.power">
+                        {{ "stats.power" | i18n }}
+                    </p>
+                </div>
+                <div class="card text-center">
+                    <h3 class="card-title" data-i18n="stats.customers_head">
+                        {{ "stats.customers_head" | i18n }}
+                    </h3>
+                    <p class="card-text" data-i18n="stats.customers">
+                        {{ "stats.customers" | i18n }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="section partners-section" aria-labelledby="partners-title">
+        <div class="container">
+            <h2
+                id="partners-title"
+                class="section-title"
+                data-i18n="partners.title"
+            >
+                {{ "partners.title" | i18n }}
+            </h2>
+            <p
+                class="partners-subtitle text-center"
+                data-i18n="partners.subtitle"
+            >
+                {{ "partners.subtitle" | i18n }}
+            </p>
+
+            <div class="partners-carousel" aria-label="Partner-Logos">
+                <div class="partners-track" id="partners-track-1">
+                    <!-- Logos will be dynamically loaded here -->
+                </div>
+                <div
+                    class="partners-track partners-track-offset"
+                    id="partners-track-2"
+                >
+                    <!-- Logos will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section" aria-labelledby="benefits-title">
+        <div class="container">
+            <h2
+                id="benefits-title"
+                class="section-title"
+                data-i18n="benefits.title"
+            >
+                {{ "benefits.title" | i18n }}
+            </h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3 class="card-title" data-i18n="benefits.economic_title">
+                        {{ "benefits.economic_title" | i18n }}
+                    </h3>
+                    <ul class="benefits-list">
+                        <li data-i18n="benefits.economic_1">
+                            {{ "benefits.economic_1" | i18n }}
+                        </li>
+                        <li data-i18n="benefits.economic_2">
+                            {{ "benefits.economic_2" | i18n }}
+                        </li>
+                        <li data-i18n="benefits.economic_3">
+                            {{ "benefits.economic_3" | i18n }}
+                        </li>
+                        <li data-i18n="benefits.economic_4">
+                            {{ "benefits.economic_4" | i18n }}
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="card-title" data-i18n="benefits.sustainability_title">
+                        {{ "benefits.sustainability_title" | i18n }}
+                    </h3>
+                    <ul class="benefits-list">
+                        <li data-i18n="benefits.sustainability_1">
+                            {{ "benefits.sustainability_1" | i18n }}
+                        </li>
+                        <li data-i18n="benefits.sustainability_2">
+                            {{ "benefits.sustainability_2" | i18n }}
+                        </li>
+                        <li data-i18n="benefits.sustainability_3">
+                            {{ "benefits.sustainability_3" | i18n }}
+                        </li>
+                        <li data-i18n="benefits.sustainability_4">
+                            {{ "benefits.sustainability_4" | i18n }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" aria-labelledby="cta-title">
+        <div class="container text-center">
+            <h2 id="cta-title" data-i18n="cta.title">
+                {{ "cta.title" | i18n }}
+            </h2>
+            <p class="mb-4" data-i18n="cta.subtitle">
+                {{ "cta.subtitle" | i18n }}
+            </p>
+            <div class="hero-actions">
+                <a href="/contact/" class="btn" data-i18n="cta.button_primary">
+                    {{ "cta.button_primary" | i18n }}
+                </a>
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,455 @@
+---
+layout: layout.njk
+title: Kontakt - GreenHOMEnergy Photovoltaik Beratung
+---
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    <!-- Page Header -->
+    <section class="section" aria-labelledby="page-title">
+      <div class="container">
+        <h1 id="page-title" class="section-title" data-i18n="contact.title">{{ "contact.title" | i18n }}</h1>
+        <p class="text-center mb-4" data-i18n="contact.subtitle">
+          {{ "contact.subtitle" | i18n }}
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Form and Info -->
+    <section class="section" aria-labelledby="contact-form-title">
+      <div class="container">
+        <div class="grid grid-2">
+          
+          <!-- Contact Form -->
+          <div class="card">
+            <h2 id="contact-form-title" class="card-title" data-i18n="contact.form_title">{{ "contact.form_title" | i18n }}</h2>
+            <form class="contact-form" action="/api/submit" method="post" novalidate id="contactForm">
+              
+              <div class="form-group">
+                <label for="company" class="form-label required" data-i18n="contact.form_company">{{ "contact.form_company" | i18n }}</label>
+                <input 
+                  type="text" 
+                  id="company" 
+                  name="company" 
+                  class="form-input" 
+                  required 
+                  aria-describedby="company-help"
+                >
+                <small id="company-help" class="form-help" data-i18n="contact.form_company_help">
+                  {{ "contact.form_company_help" | i18n }}
+                </small>
+              </div>
+
+              <div class="grid grid-2">
+                <div class="form-group">
+                  <label for="firstname" class="form-label required" data-i18n="contact.form_firstname">{{ "contact.form_firstname" | i18n }}</label>
+                  <input 
+                    type="text" 
+                    id="firstname" 
+                    name="firstname" 
+                    class="form-input" 
+                    required
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="lastname" class="form-label required" data-i18n="contact.form_lastname">{{ "contact.form_lastname" | i18n }}</label>
+                  <input 
+                    type="text" 
+                    id="lastname" 
+                    name="lastname" 
+                    class="form-input" 
+                    required
+                  >
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label required" data-i18n="contact.form_email">{{ "contact.form_email" | i18n }}</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  class="form-input" 
+                  required 
+                  aria-describedby="email-help"
+                >
+                <small id="email-help" class="form-help" data-i18n="contact.form_email_help">
+                  {{ "contact.form_email_help" | i18n }}
+                </small>
+              </div>
+
+              <div class="form-group">
+                <label for="phone" class="form-label" data-i18n="contact.form_phone">{{ "contact.form_phone" | i18n }}</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone" 
+                  class="form-input" 
+                  aria-describedby="phone-help"
+                >
+                <small id="phone-help" class="form-help" data-i18n="contact.form_phone_help">
+                  {{ "contact.form_phone_help" | i18n }}
+                </small>
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label required" data-i18n="contact.form_subject">{{ "contact.form_subject" | i18n }}</label>
+                <select id="subject" name="subject" class="form-input" required>
+                  <option value="" data-i18n="contact.subject_placeholder">{{ "contact.subject_placeholder" | i18n }}</option>
+                  <option value="beratung" data-i18n="contact.subject_1">{{ "contact.subject_1" | i18n }}</option>
+                  <option value="angebot" data-i18n="contact.subject_2">{{ "contact.subject_2" | i18n }}</option>
+                  <option value="projekt" data-i18n="contact.subject_3">{{ "contact.subject_3" | i18n }}</option>
+                  <option value="service" data-i18n="contact.subject_4">{{ "contact.subject_4" | i18n }}</option>
+                  <option value="karriere" data-i18n="contact.subject_5">{{ "contact.subject_5" | i18n }}</option>
+                  <option value="sonstiges" data-i18n="contact.subject_6">{{ "contact.subject_6" | i18n }}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="roof-area" class="form-label" data-i18n="contact.form_roof">{{ "contact.form_roof" | i18n }}</label>
+                <select id="roof-area" name="roof-area" class="form-input">
+                  <option value="" data-i18n="contact.roof_placeholder">{{ "contact.roof_placeholder" | i18n }}</option>
+                  <option value="unter-100" data-i18n="contact.roof_1">{{ "contact.roof_1" | i18n }}</option>
+                  <option value="100-500" data-i18n="contact.roof_2">{{ "contact.roof_2" | i18n }}</option>
+                  <option value="500-1000" data-i18n="contact.roof_3">{{ "contact.roof_3" | i18n }}</option>
+                  <option value="1000-2000" data-i18n="contact.roof_4">{{ "contact.roof_4" | i18n }}</option>
+                  <option value="ueber-2000" data-i18n="contact.roof_5">{{ "contact.roof_5" | i18n }}</option>
+                  <option value="unbekannt" data-i18n="contact.roof_6">{{ "contact.roof_6" | i18n }}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="energy-consumption" class="form-label" data-i18n="contact.form_energy">{{ "contact.form_energy" | i18n }}</label>
+                <select id="energy-consumption" name="energy-consumption" class="form-input">
+                  <option value="" data-i18n="contact.energy_placeholder">{{ "contact.energy_placeholder" | i18n }}</option>
+                  <option value="unter-50" data-i18n="contact.energy_1">{{ "contact.energy_1" | i18n }}</option>
+                  <option value="50-100" data-i18n="contact.energy_2">{{ "contact.energy_2" | i18n }}</option>
+                  <option value="100-250" data-i18n="contact.energy_3">{{ "contact.energy_3" | i18n }}</option>
+                  <option value="250-500" data-i18n="contact.energy_4">{{ "contact.energy_4" | i18n }}</option>
+                  <option value="ueber-500" data-i18n="contact.energy_5">{{ "contact.energy_5" | i18n }}</option>
+                  <option value="unbekannt" data-i18n="contact.energy_6">{{ "contact.energy_6" | i18n }}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label required" data-i18n="contact.form_message">{{ "contact.form_message" | i18n }}</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  class="form-textarea" 
+                  rows="5" 
+                  required 
+                  minlength="10"
+                  aria-describedby="message-help"
+                ></textarea>
+                <small id="message-help" class="form-help" data-i18n="contact.form_message_help">
+                  {{ "contact.form_message_help" | i18n }}
+                </small>
+              </div>
+
+              <div class="form-group">
+                <label class="form-checkbox">
+                  <input 
+                    type="checkbox" 
+                    id="privacy" 
+                    name="privacy" 
+                    required 
+                    aria-describedby="privacy-help"
+                  >
+                  <span class="form-checkbox-mark"></span>
+                  <span class="required" data-i18n="contact.form_privacy">{{ "contact.form_privacy" | i18n }}</span>
+                </label>
+                <small id="privacy-help" class="form-help">
+                  <a href="#datenschutz" target="_blank" data-i18n="contact.form_privacy_link">{{ "contact.form_privacy_link" | i18n }}</a>
+                </small>
+              </div>
+
+              <div class="form-group">
+                <label class="form-checkbox">
+                  <input 
+                    type="checkbox" 
+                    id="newsletter" 
+                    name="newsletter"
+                  >
+                  <span class="form-checkbox-mark"></span>
+                  <span data-i18n="contact.form_newsletter">{{ "contact.form_newsletter" | i18n }}</span>
+                </label>
+              </div>
+
+              <!-- Cloudflare Turnstile Widget -->
+              <div class="cf-turnstile" data-sitekey="0x4AAAAAAB6UeN1SsI684EQC" data-theme="light"></div>
+
+              <button type="submit" class="btn btn-full" data-i18n="contact.form_submit">
+                {{ "contact.form_submit" | i18n }}
+              </button>
+
+              <div id="form-messages" class="mt-3"></div>
+            </form>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="contact-info">
+            
+            <!-- Direct Contact -->
+            <div class="card">
+              <h2 class="card-title" data-i18n="contact.direct_contact_title">{{ "contact.direct_contact_title" | i18n }}</h2>
+<!-- HIDDEN DA NOCH KEINE TELEFONNUMMER-->
+              <div class="contact-item" hidden="true">
+                <h3>Telefon</h3>
+                <p>
+                  <a href="tel:+49123456789">+49 123 456 789</a><br>
+                  <small data-i18n="contact.phone_hours">{{ "contact.phone_hours" | i18n }}</small>
+                </p>
+              </div>
+              
+              <div class="contact-item">
+                <h3>E-Mail</h3>
+                <p>
+                  <a href="mailto:info@greenhomenergy.de">info@greenhom.energy</a><br>
+                  <small data-i18n="contact.email_response">{{ "contact.email_response" | i18n }}</small>
+                </p>
+              </div>
+
+              <div class="contact-item">
+                <h3>Adresse</h3>
+                <p data-i18n="contact.address_full">
+                  {{ "contact.address_full" | i18n | safe }}
+                </p>
+              </div>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="card">
+              <h2 class="card-title" data-i18n="contact.hours_title">{{ "contact.hours_title" | i18n }}</h2>
+              <div class="business-hours">
+                <div class="hours-item">
+                  <span data-i18n="contact.hours_week">{{ "contact.hours_mf" | i18n }}</span>
+                  <span data-i18n="contact.hours_open">{{ "contact.hours_open" | i18n }}</span>
+                </div>
+                <div class="hours-item">
+                  <span data-i18n="contact.hours_weekend">{{ "contact.hours_su" | i18n }}</span>
+                  <span data-i18n="contact.hours_closed">{{ "contact.hours_closed" | i18n }}</span>
+                </div>
+              </div>
+              <p class="mt-3">
+                <small data-i18n="contact.hours_note">
+                  {{ "contact.hours_note" | i18n }}
+                </small>
+              </p>
+            </div>
+
+            <!-- Emergency Contact //CURRENTLY HIDDEN// -->
+            <div class="card" hidden="true">
+              <h2 class="card-title" data-i18n="contact.emergency_title">{{ "contact.emergency_title" | i18n }}</h2>
+              <p data-i18n="contact.emergency_text">
+                {{ "contact.emergency_text" | i18n }}
+              </p>
+              <p class="text-center">
+                <a href="tel:+49123456700" class="btn btn-secondary" data-i18n="contact.emergency_button">
+                  {{ "contact.emergency_button" | i18n }}
+                </a>
+              </p>
+              <p>
+                <a href="tel:+49123456700" class="btn btn-secondary">Notfall-Hotline</a>
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section services" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 id="faq-title" class="section-title" data-i18n="contact.faq_title">{{ "contact.faq_title" | i18n }}</h2>
+        <div class="grid grid-2">
+          
+          <div class="card">
+            <h3 class="card-title" data-i18n="contact.faq1_q">{{ "contact.faq1_q" | i18n }}</h3>
+            <p class="card-text" data-i18n="contact.faq1_a">{{ "contact.faq1_a" | i18n }}</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title" data-i18n="contact.faq2_q">{{ "contact.faq2_q" | i18n }}</h3>
+            <p class="card-text" data-i18n="contact.faq2_a">{{ "contact.faq2_a" | i18n }}</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title" data-i18n="contact.faq3_q">{{ "contact.faq3_q" | i18n }}</h3>
+            <p class="card-text" data-i18n="contact.faq3_a">{{ "contact.faq3_a" | i18n }}</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section" aria-labelledby="location-title">
+      <div class="container">
+        <h2 id="location-title" class="section-title" data-i18n="contact.map_title">{{ "contact.map_title" | i18n }}</h2>
+        
+        <!-- Main Office -->
+        <div class="location-section">
+          <h3 class="text-center mb-3" data-i18n="contact.main_office_title">{{ "contact.main_office_title" | i18n }}</h3>
+          <div class="map-container">
+            <div class="google-maps-embed">
+              <iframe
+              src="https://maps.google.com/maps?q=Br%C3%BCsseler%20Stra%C3%9Fe%206%2C%2067657%20Kaiserslautern&hl=de&z=16&output=embed"
+              width="100%"
+              height="400"
+              style="border:0; border-radius: var(--border-radius);"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="GreenHOMEnergy Standort – Brüsseler Straße 6, 67657 Kaiserslautern"
+              aria-label="Karte mit dem Standort von GreenHOMEnergy in Kaiserslautern">
+            </iframe>
+            </div>
+            <div class="map-info">
+              <p class="text-center mt-3" data-i18n="contact.main_office_address">
+                {{ "contact.main_office_address" | i18n }}
+              </p>
+              <div class="map-actions text-center mt-2">
+                <a href="https://maps.apple.com/place?address=Br%C3%BCsseler+Stra%C3%9Fe+6%2C+67657+Kaiserslautern%2C+Deutschland&coordinate=49.4564878%2C7.8022833&name=GreenHOMEnergy+GmbH" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-secondary">
+                  In Apple Maps öffnen
+                </a>
+                <a href="https://maps.app.goo.gl/jdJ4qK27fjAMJnn8A" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-secondary">
+                  In Google Maps öffnen
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Delivery Address -->
+        <div class="location-section mt-5">
+          <h3 class="text-center mb-3" data-i18n="contact.delivery_title">{{ "contact.delivery_title" | i18n }}</h3>
+          <div class="map-container">
+            <div class="google-maps-embed">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2619.5!2d7.290551!3d49.3086083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4795c5005d920687%3A0x6667b01402adadc6!2sGreenHomEnergy%20GmbH!5e0!3m2!1sde!2sde!4v1699000000001!5m2!1sde!2sde"
+                width="100%" 
+                height="400" 
+                style="border:0; border-radius: var(--border-radius);" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="GreenHOMEnergy Anlieferungsadresse - Zweibrücker Str. 24, 66459 Kirkel"
+                aria-label="Karte mit der Anlieferungsadresse von GreenHOMEnergy in Kirkel">
+              </iframe>
+            </div>
+            <div class="map-info">
+              <p class="text-center mt-3" data-i18n="contact.delivery_address">
+                {{ "contact.delivery_address" | i18n }}
+              </p>
+              <div class="map-actions text-center mt-2">
+                <a href="https://maps.apple.com/place?center=49.30856400135709%2C7.29119890000004&span=0.008983152841203434%2C0.016002958678114965" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-secondary">
+                  In Apple Maps öffnen
+                </a>
+                <a href="https://www.google.com/maps/place/GreenHomEnergy+GmbH/@49.3087471,7.2904387,19.04z/data=!4m6!3m5!1s0x4795c5005d920687:0x6667b01402adadc6!8m2!3d49.3086083!4d7.290551!16s%2Fg%2F11y2ndhyh0?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-secondary">
+                  In Google Maps öffnen
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container text-center">
+        <h2 id="cta-title" data-i18n="contact.cta_title">{{ "contact.cta_title" | i18n }}</h2>
+        <p class="mb-4" data-i18n="contact.cta_subtitle">
+          {{ "contact.cta_subtitle" | i18n }}
+        </p>
+        <div class="hero-actions">
+          <a href="#contact-form-title" class="btn btn-secondary" data-i18n="contact.cta_form_button">
+            {{ "contact.cta_form_button" | i18n }}
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const contactForm = document.getElementById('contactForm');
+      const formMessages = document.getElementById('form-messages');
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', async (event) => {
+          event.preventDefault(); // Prevent default form submission
+
+          formMessages.innerHTML = ''; // Clear previous messages
+          formMessages.classList.remove('success', 'error'); // Clear previous styles
+
+          // --- Simple Frontend Validation ---
+          let isValid = true;
+          const requiredFields = contactForm.querySelectorAll('[required]');
+
+          requiredFields.forEach(field => {
+            // Check for empty value in text, email, textarea, and select
+            if (field.type === 'checkbox') {
+              if (!field.checked) {
+                isValid = false;
+              }
+            } else {
+              if (!field.value.trim()) {
+                isValid = false;
+              }
+            }
+          });
+
+          if (!isValid) {
+            formMessages.innerHTML = '<div class="alert alert-danger" role="alert">Bitte füllen Sie alle erforderlichen Felder aus.</div>';
+            formMessages.classList.add('error');
+            return; // Stop the submission
+          }
+          // --- End Validation ---
+
+          const formData = new FormData(contactForm);
+          
+          try {
+            const response = await fetch(contactForm.action, {
+              method: contactForm.method,
+              body: formData,
+              headers: {
+                'Accept': 'application/json' // Indicate that we prefer JSON response
+              }
+            });
+
+            const result = await response.json(); // Assuming the worker returns JSON
+
+            if (response.ok) {
+              formMessages.innerHTML = '<div class="alert alert-success" role="alert">Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.</div>';
+              formMessages.classList.add('success');
+              contactForm.reset(); // Clear the form
+            } else {
+              // Handle errors from the worker (e.g., status 400)
+              let errorMessage = result.error || 'Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.';
+              formMessages.innerHTML = `<div class="alert alert-danger" role="alert">${errorMessage}</div>`;
+              formMessages.classList.add('error');
+            }
+          } catch (error) {
+            console.error('Error during form submission:', error);
+            formMessages.innerHTML = '<div class="alert alert-danger" role="alert">Ein unerwarteter Fehler ist aufgetreten. Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.</div>';
+            formMessages.classList.add('error');
+          }
+        });
+      }
+    });
+  </script>

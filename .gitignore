@@ -1,0 +1,21 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+#TODO
+TODO.MD
+
+# Logs
+*.log
+
+# Temporary Files
+*.tmp
+*.swp
+
+# Project-specific ignored files
+.promt
+
+# Node
+node_modules
+dist
+

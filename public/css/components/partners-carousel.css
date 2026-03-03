@@ -1,0 +1,133 @@
+/* Partners Section Styles */
+.partners-section {
+  background: linear-gradient(135deg, rgba(127, 176, 105, 0.05), rgba(74, 124, 89, 0.05));
+  overflow: hidden;
+}
+
+.partners-subtitle {
+  color: var(--text-light);
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+.partners-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  mask: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+.partners-track {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  animation: scroll-left 60s linear infinite;
+  margin-bottom: 2rem;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.partners-track:last-child {
+  margin-bottom: 0;
+}
+
+.partners-track-offset {
+  animation-delay: -30s;
+  animation-direction: reverse;
+}
+
+.partner-logo {
+  flex-shrink: 0;
+  height: 60px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition);
+  cursor: pointer;
+  will-change: filter, transform;
+  backface-visibility: hidden;
+}
+
+.partner-logo:hover {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.05) translate3d(0, 0, 0);
+}
+
+/* Animation for the carousel */
+@keyframes scroll-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+/* Pause animation on hover */
+.partners-carousel:hover .partners-track {
+  animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .partners-track {
+    gap: 2rem;
+    animation-duration: 40s;
+  }
+  
+  .partner-logo {
+    height: 45px;
+    max-width: 150px;
+  }
+  
+  .partners-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-track {
+    gap: 1.5rem;
+    animation-duration: 30s;
+  }
+  
+  .partner-logo {
+    height: 35px;
+    max-width: 120px;
+  }
+}
+
+/* Accessibility: Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .partners-track {
+    animation: none;
+  }
+  
+  .partners-carousel {
+    overflow-x: auto;
+    mask: none;
+    -webkit-mask: none;
+  }
+  
+  .partners-track {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}

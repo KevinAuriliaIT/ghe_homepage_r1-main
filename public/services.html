@@ -1,0 +1,297 @@
+---
+layout: layout.njk
+title: Unsere Leistungen - GreenHOMEnergy
+---
+
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    <!-- Hero Section -->
+    <section class="hero hero--secondary" aria-labelledby="hero-title">
+        <div class="hero-background" aria-hidden="true"></div>
+        <!-- Video background for services page -->
+        <video
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            aria-hidden="true"
+        >
+            <source src="/assets/videos/drone-footage.mp4" type="video/mp4" />
+            <!-- Fallback for browsers that don't support video -->
+        </video>
+
+        <div class="hero-content glass-card">
+            <h1 id="hero-title" class="hero-title" data-i18n="services.page_title">{{ "services.page_title" | i18n }}</h1>
+            <p class="hero-subtitle" data-i18n="services.page_subtitle">
+                {{ "services.page_subtitle" | i18n }}
+            </p>
+        </div>
+    </section>
+
+    <!-- Service Categories Overview -->
+    <section class="section" aria-labelledby="categories-title">
+        <div class="container">
+            <h2 id="categories-title" class="section-title" data-i18n="services.categories_title">{{ "services.categories_title" | i18n }}</h2>
+            <div class="grid grid-3">
+                <div class="card service-category">
+                    <h3 class="card-title" data-i18n="services.pv_systems_title">{{ "services.pv_systems_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.pv_systems_subtitle">
+                        {{ "services.pv_systems_subtitle" | i18n }}
+                    </p>
+                </div>
+                <div class="card service-category">
+                    <h3 class="card-title" data-i18n="services.epc_services_title">{{ "services.epc_services_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.epc_services_subtitle">
+                        {{ "services.epc_services_subtitle" | i18n }}
+                    </p>
+                </div>
+                <div class="card service-category">
+                    <h3 class="card-title" data-i18n="services.special_services_title">{{ "services.special_services_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.special_services_subtitle">
+                        {{ "services.special_services_subtitle" | i18n }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PV System Types -->
+    <section class="section services-detail" aria-labelledby="pv-systems-title">
+        <div class="container">
+            <h2 id="pv-systems-title" class="section-title" data-i18n="services.pv_systems_title">{{ "services.pv_systems_title" | i18n }}</h2>
+            <div class="pv-systems-grid">
+                <div class="card service-detail">
+                    <h3 class="card-title" data-i18n="services.rooftop_title">{{ "services.rooftop_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.rooftop_text">
+                        {{ "services.rooftop_text" | i18n }}
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag">Flachdach</span>
+                        <span class="feature-tag">Steildach</span>
+                        <span class="feature-tag">Sandwich/Trapezblech</span>
+                    </div>
+                </div>
+                <div class="card service-detail">
+                    <h3 class="card-title" data-i18n="services.ground_mount_title">{{ "services.ground_mount_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.ground_mount_text">
+                        {{ "services.ground_mount_text" | i18n }}
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag">Projektentwicklung</span>
+                        <span class="feature-tag">Bodengutachten</span>
+                        <span class="feature-tag">Rammarbeiten</span>
+                    </div>
+                </div>
+                <div class="card service-detail">
+                    <h3 class="card-title" data-i18n="services.carport_title">{{ "services.carport_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.carport_text">
+                        {{ "services.carport_text" | i18n }}
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag">Einfache Installation</span>
+                        <span class="feature-tag">Wallbox-Integration</span>
+                        <span class="feature-tag">CE-Zertifiziert</span>
+                    </div>
+                </div>
+                <div class="card service-detail">
+                    <h3 class="card-title" data-i18n="services.agri_pv_title">{{ "services.agri_pv_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.agri_pv_text">
+                        {{ "services.agri_pv_text" | i18n }}
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag">Doppelnutzung</span>
+                        <span class="feature-tag">Landwirtschaft</span>
+                        <span class="feature-tag">Innovation</span>
+                    </div>
+                </div>
+                <div class="card service-detail">
+                    <h3 class="card-title" data-i18n="services.bess_title">{{ "services.bess_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.bess_text">
+                        {{ "services.bess_text" | i18n }}
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag">Eigenverbrauch</span>
+                        <span class="feature-tag">Netzstabilität</span>
+                        <span class="feature-tag">Smart Grid</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EPC Services -->
+    <section class="section services-detail services-epc" aria-labelledby="epc-services-title">
+        <div class="container">
+            <h2 id="epc-services-title" class="section-title" data-i18n="services.epc_services_title">{{ "services.epc_services_title" | i18n }}</h2>
+            <div class="grid grid-2">
+                <div class="card service-detail">
+                    <h3 class="card-title" data-i18n="services.project_dev_title">{{ "services.project_dev_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.project_dev_text">
+                        {{ "services.project_dev_text" | i18n }}
+                    </p>
+                </div>
+                <div class="card service-detail">
+                    <h3 class="card-title" data-i18n="services.engineering_title">{{ "services.engineering_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.engineering_text">
+                        {{ "services.engineering_text" | i18n }}
+                    </p>
+                </div>
+                <div class="card service-detail">
+                    <h3 class="card-title" data-i18n="services.turnkey_title">{{ "services.turnkey_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.turnkey_text">
+                        {{ "services.turnkey_text" | i18n }}
+                    </p>
+                </div>
+                <div class="card service-detail">
+                    <h3 class="card-title" data-i18n="services.operation_management_title">{{ "services.operation_management_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.operation_management_text">
+                        {{ "services.operation_management_text" | i18n }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Services -->
+    <section class="section services-detail" aria-labelledby="special-services-title">
+        <div class="container">
+            <h2 id="special-services-title" class="section-title" data-i18n="services.special_services_title">{{ "services.special_services_title" | i18n }}</h2>
+            <div class="grid grid-auto-fill">
+                <div class="card service-detail">
+                    <h3 class="card-title" data-i18n="services.drone_survey_title">{{ "services.drone_survey_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.drone_survey_text">
+                        {{ "services.drone_survey_text" | i18n }}
+                    </p>
+                </div>
+                <div class="card service-detail">
+                    <h3 class="card-title" data-i18n="services.assembly_services_title">{{ "services.assembly_services_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.assembly_services_text">
+                        {{ "services.assembly_services_text" | i18n }}
+                    </p>
+                </div>
+                <div class="card service-detail">
+                    <h3 class="card-title" data-i18n="services.flat_roof_assembly_title">{{ "services.flat_roof_assembly_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.flat_roof_assembly_text">
+                        {{ "services.flat_roof_assembly_text" | i18n }}
+                    </p>
+                </div>
+                <div class="card service-detail">
+                    <h3 class="card-title" data-i18n="services.fence_construction_title">{{ "services.fence_construction_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.fence_construction_text">
+                        {{ "services.fence_construction_text" | i18n }}
+                    </p>
+                </div>
+                <div class="card service-detail">
+                    <h3 class="card-title" data-i18n="services.om_title">{{ "services.om_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.om_text">
+                        {{ "services.om_text" | i18n }}
+                    </p>
+                </div>
+                <div class="card service-detail">
+                    <h3 class="card-title" data-i18n="services.maintenance_emergency_title">{{ "services.maintenance_emergency_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.maintenance_emergency_text">
+                        {{ "services.maintenance_emergency_text" | i18n }}
+                    </p>
+                </div>
+                <div class="special-partner-services-group">
+                    <h3 class="subsection-title" data-i18n="services.partner_services_title">{{ "services.partner_services_title" | i18n }}</h3>
+                    <div class="grid grid-auto-fill">
+                        <div class="card service-detail">
+                            <h3 class="card-title" data-i18n="services.direct_marketing_title">{{ "services.direct_marketing_title" | i18n }}</h3>
+                            <p class="card-text" data-i18n="services.direct_marketing_text">
+                                {{ "services.direct_marketing_text" | i18n }}
+                            </p>
+                        </div>
+                        <div class="card service-detail">
+                            <h3 class="card-title" data-i18n="services.tenant_electricity_title">{{ "services.tenant_electricity_title" | i18n }}</h3>
+                            <p class="card-text" data-i18n="services.tenant_electricity_text">
+                                {{ "services.tenant_electricity_text" | i18n }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Process -->
+    <section class="section process-section" aria-labelledby="process-title">
+        <div class="container">
+            <h2 id="process-title" class="section-title" data-i18n="services.process_title">{{ "services.process_title" | i18n }}</h2>
+            <p class="text-center mb-4" data-i18n="services.process_subtitle">{{ "services.process_subtitle" | i18n }}</p>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="process-step-number">1</div>
+                    <div class="process-step-content">
+                        <h3 class="process-step-title" data-i18n="services.process_step1_title">{{ "services.process_step1_title" | i18n }}</h3>
+                        <p class="process-step-text" data-i18n="services.process_step1_text">{{ "services.process_step1_text" | i18n }}</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">2</div>
+                    <div class="process-step-content">
+                        <h3 class="process-step-title" data-i18n="services.process_step2_title">{{ "services.process_step2_title" | i18n }}</h3>
+                        <p class="process-step-text" data-i18n="services.process_step2_text">{{ "services.process_step2_text" | i18n }}</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">3</div>
+                    <div class="process-step-content">
+                        <h3 class="process-step-title" data-i18n="services.process_step3_title">{{ "services.process_step3_title" | i18n }}</h3>
+                        <p class="process-step-text" data-i18n="services.process_step3_text">{{ "services.process_step3_text" | i18n }}</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">4</div>
+                    <div class="process-step-content">
+                        <h3 class="process-step-title" data-i18n="services.process_step4_title">{{ "services.process_step4_title" | i18n }}</h3>
+                        <p class="process-step-text" data-i18n="services.process_step4_text">{{ "services.process_step4_text" | i18n }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed B2B Services (keeping original content) -->
+    <section class="section" aria-labelledby="detailed-services-title">
+        <div class="container">
+            <h2 id="detailed-services-title" class="section-title" data-i18n="services.detailed_title">{{ "services.detailed_title" | i18n }}</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3 class="card-title" data-i18n="services.b2b_planning_title">{{ "services.b2b_planning_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.b2b_planning_text">
+                        {{ "services.b2b_planning_text" | i18n }}
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title" data-i18n="services.b2b_installation_title">{{ "services.b2b_installation_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.b2b_installation_text">
+                        {{ "services.b2b_installation_text" | i18n }}
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title" data-i18n="services.b2b_maintenance_title">{{ "services.b2b_maintenance_title" | i18n }}</h3>
+                    <p class="card-text" data-i18n="services.b2b_maintenance_text">
+                        {{ "services.b2b_maintenance_text" | i18n }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" aria-labelledby="cta-title">
+        <div class="container text-center">
+            <h2 id="cta-title" data-i18n="cta.title">{{ "cta.title" | i18n }}</h2>
+            <p class="mb-4" data-i18n="cta.subtitle">
+                {{ "cta.subtitle" | i18n }}
+            </p>
+            <div class="hero-actions">
+                <a href="/contact/" class="btn" data-i18n="cta.button_primary">
+                    {{ "cta.button_primary" | i18n }}
+                </a>
+            </div>
+        </div>
+    </section>
+  </main>

@@ -1,0 +1,130 @@
+/* GreenHOMEnergy Website - Main Styles */
+
+/*
+  IMPORT ORDER
+  1. Themes: Load color variables first.
+  2. Base: Load resets, typography, and base element styles.
+  3. Components: Load individual component styles.
+  4. Layout: Load main layout containers and grids.
+  5. Utilities: Load helper classes.
+*/
+
+@import url('themes.css');
+@import url('base/base.css');
+@import url('components/header.css');
+@import url('components/footer.css');
+@import url('components/buttons.css');
+@import url('components/cards.css');
+@import url('components/forms.css');
+@import url('components/partners-carousel.css');
+@import url('components/hero.css');
+@import url('components/services.css');
+@import url('components/contact.css');
+@import url('components/projects-map.css');
+@import url('accessibility.css');
+@import url('header-animations.css');
+
+
+/* CSS Custom Properties - Default Theme (Solar Green) - Kept for fallback */
+:root {
+  --primary-color: #2d5016;
+  --secondary-color: #4a7c59;
+  --accent-color: #7fb069;
+  --text-color: #1a1a1a;
+  --text-light: #666666;
+  --background-color: #ffffff;
+  --card-background: rgba(255, 255, 255, 0.9);
+  --border-color: #e5e5e5;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+  --transition: all 300ms ease-in-out;
+  --border-radius: 12px;
+  --max-width: 1200px;
+}
+
+/* Layout Components */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Grid Layouts */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.grid-5 {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.grid-6 {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.grid-auto-fill {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+
+/* Special grid for PV systems with 5 cards - better distribution */
+.pv-systems-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .pv-systems-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .pv-systems-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.hidden { display: none; }
+.visible { display: block; }

@@ -1,0 +1,45 @@
+<!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 data-i18n="footer.company_name">{{ "footer.company_name" | i18n }}</h3>
+          <p data-i18n="footer.company_description">
+            {{ "footer.company_description" | i18n }}
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3 data-i18n="footer.contact_title">{{ "footer.contact_title" | i18n }}</h3>
+          <p data-i18n="footer.address">
+            {{ "footer.address" | i18n | safe }}
+          </p>
+          <p>
+            <!-- <a href="tel:+49123456789">+49 123 456 789</a><br> -->
+            <a href="mailto:info@greenhomenergy.de" data-i18n="footer.email">{{ "footer.email" | i18n }}</a>
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3 data-i18n="footer.services_title">{{ "footer.services_title" | i18n }}</h3>
+          <p>
+<!--
+            <a href="/projects/" data-i18n="navigation.projects">{{ "navigation.projects" | i18n }}</a><br>
+-->
+            <a href="/contact/" data-i18n="navigation.contact">{{ "navigation.contact" | i18n }}</a><br>
+            <a href="#" onclick="window.cookieBanner?.openSettings(); return false;" data-i18n="footer.cookie_settings">{{ "footer.cookie_settings" | i18n }}</a>
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3 data-i18n="footer.legal_title">{{ "footer.legal_title" | i18n }}</h3>
+          <p>
+            <a href="/legal/#impressum" data-i18n="footer.imprint">{{ "footer.imprint" | i18n }}</a><br>
+            <a href="/legal/#datenschutz" data-i18n="footer.privacy">{{ "footer.privacy" | i18n }}</a><br>
+            <a href="/legal/#agb" data-i18n="footer.agb">{{ "footer.agb" | i18n }}</a><br>
+            <a href="/legal/#widerruf" data-i18n="footer.revocation">{{ "footer.revocation" | i18n }}</a>
+          </p>
+        </div>
+      </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer.copyright">{{ "footer.copyright_text" | i18n }}</p>
+    </div>
+    </div>
+  </footer>

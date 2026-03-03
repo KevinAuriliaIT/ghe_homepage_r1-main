@@ -1,0 +1,560 @@
+/* GreenHOMEnergy Website - Responsive Styles */
+
+/* Mobile First Approach - Base styles are for mobile */
+
+/* Small Mobile (320px - 479px) */
+@media (max-width: 479px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-content {
+    padding: 1.5rem;
+  }
+  
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  
+  .section {
+    padding: 2rem 0;
+  }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.25rem; }
+  
+  /* Extra compact header for very small screens */
+  .header--floating {
+    top: 0.125rem;
+    margin: 0 0.25rem;
+    border-radius: 10px;
+  }
+  
+  .nav {
+    padding: 0.5rem 0;
+    height: 60px;
+  }
+  
+  .header.scrolled .nav {
+    height: 50px;
+    padding: 0.5rem 0;
+  }
+  
+  .header--floating .nav {
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .logo-link {
+    width: 140px;
+    height: 40px;
+  }
+  
+  .logo-animated {
+    height: 35px;
+    width: 130px;
+  }
+}
+
+/* Mobile (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .logo-link {
+    width: 160px;
+    height: 45px;
+  }
+  
+  .logo-animated {
+    height: 40px;
+    width: 150px;
+  }
+}
+
+/* Mobile Navigation - Show hamburger menu and hide desktop nav */
+@media (max-width: 768px) {
+  /* Header adjustments */
+  .header {
+    border-radius: 0;
+    margin: 0;
+    top: 0;
+  }
+  
+  .header--floating {
+    top: 0.25rem;
+    margin: 0 0.5rem;
+    border-radius: 12px;
+  }
+  
+  .nav {
+    padding: 0.75rem 0;
+    height: 70px;
+  }
+  
+  .header.scrolled .nav {
+    height: 60px;
+    padding: 0.75rem 0;
+  }
+  
+  .header--floating .nav {
+    padding: 0.75rem 1rem;
+  }
+  
+  /* Logo sizing for mobile */
+  .logo-link {
+    width: 180px;
+    height: 50px;
+  }
+  
+  .logo-animated {
+    height: 45px;
+    width: 170px;
+  }
+  
+  /* Hide desktop navigation */
+  .nav-menu {
+    display: none;
+  }
+  
+  /* Show mobile menu toggle */
+  .mobile-menu-toggle {
+    display: flex;
+    margin-right: 1rem; /* Add margin to the right */
+  }
+  
+  /* Ensure nav-controls display correctly on mobile */
+  .nav-controls {
+    display: flex; /* Ensure flexbox layout */
+    align-items: center; /* Vertically align items */
+    gap: 1rem; /* Increased space between items */
+  }
+
+  /* Ensure theme and language switchers are visible on mobile */
+  .nav-controls .theme-switcher,
+  .nav-controls .language-switcher {
+    display: block; /* Override display: none */
+  }
+  
+  /* Mobile menu positioning */
+  .mobile-menu {
+    left: 0;
+    right: 0;
+  }
+  
+  .header--floating .mobile-menu {
+    left: 0.5rem;
+    right: 0.5rem;
+  }
+
+  /* Adjust theme and language switchers for mobile */
+  .custom-language-dropdown {
+    width: 44px;
+    height: 44px;
+  }
+
+  .custom-language-dropdown .current-language-display {
+    font-size: 1.2rem;
+  }
+
+  .custom-language-dropdown .language-options-list {
+    min-width: 140px; /* Adjust width for mobile */
+  }
+
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding: 0 2rem;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .footer-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .logo-link {
+    width: 200px;
+    height: 50px;
+  }
+  
+  .logo-animated {
+    height: 45px;
+    width: 190px;
+  }
+}
+
+/* Desktop (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .container {
+    padding: 0 2rem;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .footer-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .logo-link {
+    width: 220px;
+    height: 55px;
+  }
+  
+  .logo-animated {
+    height: 50px;
+    width: 200px;
+  }
+}
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+  .container {
+    padding: 0 3rem;
+  }
+  
+  .hero-title {
+    font-size: 4.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .section {
+    padding: 5rem 0;
+  }
+  
+  .logo-link {
+    width: 240px;
+    height: 60px;
+  }
+  
+  .logo-animated {
+    height: 55px;
+    width: 220px;
+  }
+  
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.5rem; }
+  h3 { font-size: 1.75rem; }
+  
+  .card {
+    padding: 2.5rem;
+  }
+  
+  .btn {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Ultra-wide screens (1920px+) */
+@media (min-width: 1920px) {
+  :root {
+    --max-width: 1400px;
+  }
+  
+  .hero-title {
+    font-size: 5rem;
+  }
+  
+  .section {
+    padding: 6rem 0;
+  }
+}
+
+/* High DPI / Retina displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .logo-animated {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+  .hero {
+    height: 100vh;
+    padding: 1rem 0;
+  }
+  
+  .hero-content {
+    padding: 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .nav {
+    padding: 0.5rem 0;
+    height: 60px;
+  }
+  
+  .header.scrolled .nav {
+    height: 50px;
+  }
+  
+  .logo-animated {
+    height: 35px;
+    width: 130px;
+  }
+}
+
+/* Print styles */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  .header,
+  .footer,
+  .mobile-menu-toggle,
+  .theme-switcher,
+  .btn {
+    display: none !important;
+  }
+  
+  .hero {
+    height: auto;
+    page-break-after: always;
+  }
+  
+  .hero-background,
+  .hero-video {
+    display: none;
+  }
+  
+  .hero-content {
+    background: transparent;
+    color: black;
+    backdrop-filter: none;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    page-break-inside: avoid;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .hero-video {
+    display: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --border-color: #000000;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .card {
+    border: 2px solid var(--border-color);
+  }
+  
+  .btn {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Dark mode preference (system) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --primary-color: #1f2937;
+    --secondary-color: #374151;
+    --accent-color: #f59e0b;
+    --text-color: #f9fafb;
+    --text-light: #d1d5db;
+    --background-color: #111827;
+    --card-background: rgba(31, 41, 55, 0.9);
+    --border-color: #374151;
+  }
+}
+
+/* Focus management for keyboard navigation */
+@media (any-hover: none) {
+  .card:hover {
+    transform: none;
+  }
+  
+  .btn:hover {
+    transform: none;
+  }
+}
+
+/* Touch device optimizations */
+@media (any-pointer: coarse) {
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .nav-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mobile-nav-link {
+    min-height: 44px;
+  }
+  
+  .language-dropdown {
+    min-height: 44px;
+  }
+}
+
+/* Contact Page Responsive Styles */
+@media (max-width: 768px) {
+  .contact-info {
+    gap: 1.5rem;
+  }
+  
+  .contact-item {
+    margin-bottom: 1rem;
+  }
+  
+  .map-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .map-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .apple-maps-embed iframe {
+    height: 300px;
+  }
+  
+  .services .grid .card {
+    padding: 1.5rem;
+  }
+  
+  .services .card-title {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info {
+    gap: 1rem;
+  }
+  
+  .apple-maps-embed iframe {
+    height: 250px;
+  }
+  
+  .map-actions .btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .services .grid .card {
+    padding: 1.25rem;
+  }
+  
+  .hours-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .business-hours {
+    gap: 1rem;
+  }
+}
+
+/* Form responsive improvements */
+@media (max-width: 768px) {
+  .form-input,
+  .form-textarea {
+    padding: 0.875rem;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+  
+  .form-checkbox {
+    gap: 0.5rem;
+  }
+  
+  .form-checkbox-mark {
+    margin-top: 1px;
+  }
+}

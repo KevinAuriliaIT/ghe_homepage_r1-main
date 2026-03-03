@@ -1,0 +1,47 @@
+/* GreenHOMEnergy Website - Simplified Theme System */
+
+/* Bright Theme (Default) */
+[data-theme="bright"] {
+  --primary-color: #2a471d; /* Slightly darker green for better contrast */
+  --secondary-color: #4a7c59;
+  --accent-color: #8bc34a; /* Brighter accent for better visibility */
+  --text-color: #121212; /* Darker text for readability */
+  --text-light: #343434;
+  --background-color: #f7f9f5; /* Off-white background to reduce glare */
+  --card-background: #ffffff;
+  --border-color: #dce3d8;
+  --heading-color: #2a471d;
+  --header-background-color: rgba(247, 249, 245, 0.85);
+  --header-text-color: #121212;
+  --btn-primary-bg: #8bc34a;
+  --btn-primary-text: #ffffff;
+  --btn-secondary-bg: #4a7c59;
+  --btn-secondary-text: #ffffff;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --primary-color: #ffffff; 
+  --secondary-color: #272727;
+  --accent-color: #e29609; 
+  --text-color: #e29609;
+  --text-light: #ffffff; 
+  --background-color: #0d1117; 
+  --card-background: #161b22;
+  --border-color: #30363d;
+  --heading-color: #e29609;
+  --header-background-color: rgba(14, 14, 14, 0.85);
+  --header-text-color: #ffffff;
+  --btn-primary-bg: #e29609;
+  --btn-primary-text: #000000;
+  --btn-secondary-bg: #272727;
+  --btn-secondary-text: #ffffff;
+}
+
+/* Ensure form input text is readable in dark mode */
+[data-theme="dark"] .form-input,
+[data-theme="dark"] .form-textarea,
+[data-theme="dark"] .form-input::placeholder,
+[data-theme="dark"] .form-textarea::placeholder {
+  color: var(--text-light);
+}
