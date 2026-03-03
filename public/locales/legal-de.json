@@ -10,7 +10,7 @@
     "impressum": {
       "title": "Impressum",
       "intro": "Dies ist ein Platzhalter für das Impressum. Hier werden die gesetzlich vorgeschriebenen Angaben zum Anbieter der Webseite stehen.",
-      "tmg_label": "Angaben gemäß § 5 TMG:",
+      "tmg_label": " TEST Angaben gemäß § 5 TMG:",
       "company_info": "GreenHOMEnergy GmbH<br>Brüsseler Straße 6<br>67657 Kaiserslautern",
       "represented_by": "Vertreten durch:",
       "representative": "Yannick Grossmann<br>Dima Dietrich Deschtschenja",
@@ -18,7 +18,7 @@
       "contact_info": "E-Mail: info@greenhom.energy",
       "register_label": "Registereintrag:",
       "register_info": "Eingetragen im Handelsregister.<br>Registergericht: Amtsgericht Kaiserslautern<br>Registernummer: HRB 34318",
-      "vat_label": "ssssssssUmsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: ",
+      "vat_label": "Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: ",
       "vat_info": "DE356021633"
     },
     "datenschutz": {
